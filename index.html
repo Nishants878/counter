@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="content-wrapper">
+            <h1>Counter</h1>
+            <div id="counter-container">
+                0
+            </div>
+            <div id="btn-wrap">
+            <button id="lower" type="button">Lower Count</button>
+            <button id="up" type="button">Add Count</button>
+        </div>
+        </div>
+    </div>
+    <script>
+        let btnLower = document.getElementById("lower");
+        let btnUp = document.getElementById("up");
+        let countContainer = document.getElementById("counter-container");
+        let count= 0;
+
+        btnUp.addEventListener("click", function(){
+            count += 1;
+            countContainer.innerHTML = count;
+
+        })
+        btnLower.addEventListener("click", function(){
+            count -= 1;
+            countContainer.innerHTML = count;
+        })
+
+    
+
+
+
+    </script>
+</body>
+</html>
